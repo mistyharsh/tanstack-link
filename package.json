@@ -1,5 +1,5 @@
 {
-  "name": "gleam_javascript_template",
+  "name": "hello-gleam",
   "type": "module",
   "scripts": {
     "build": "node bin/build.js build",
