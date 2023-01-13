@@ -1,24 +1,24 @@
-# Gleam JavaScript template
+# hello_gleam
 
-A little template project for trying out Gleam compiled to JavaScript.
+[![Package Version](https://img.shields.io/hexpm/v/hello_gleam)](https://hex.pm/packages/hello_gleam)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/hello_gleam/)
 
-## Usage
+A Gleam project
 
-Click on "Use this template" to create your own copy of this repository.
-
-Ensure you have [Gleam](https://gleam.run/getting-started/#installing-gleam) and
-[NodeJS](https://nodejs.org/en/download/) installed.
+## Quick start
 
 ```sh
-# Clone and enter the project
-git clone $MY_REPO_CLONE_URL hello-gleam-js
-cd hello-gleam-js
-
-# Install the node modules
-npm install
-
-# Run the Gleam program on NodeJS
-npm start
+gleam run   # Run the project
+gleam test  # Run the tests
+gleam shell # Run an Erlang shell
 ```
 
-And now you can write your Gleam and JavaScript code in the `src` directory.
+## Installation
+
+If available on Hex this package can be added to your Gleam project:
+
+```sh
+gleam add hello_gleam
+```
+
+and its documentation can be found at <https://hexdocs.pm/hello_gleam>.
