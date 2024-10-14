@@ -1,24 +1,23 @@
-# hello_gleam
+# The `<Link />` href issues
 
-[![Package Version](https://img.shields.io/hexpm/v/hello_gleam)](https://hex.pm/packages/hello_gleam)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/hello_gleam/)
+This repo reproduces issues with `@tanstack/react-router` package when `createLink` is used together with `Link` component. The `src/View/Header.tsx` file contains two implementations for `LinkButton` component. The `LinkButton` uses `<a>` element while `LinkButton2` uses `<Link />` component provided by the library.
 
-A Gleam project
+## Issue description
 
-## Quick start
+- The `createLink` component forwards the resolved options to render the `<a>` element which includes the `href` prop.
+- However, the `<Link />` component ignores the `href` prop and instead renders the URL that is in the browser.
+- Visit the root/home page and the **Tenant 2** anchor tag in the header renders invalid `href` value.
 
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-gleam shell # Run an Erlang shell
+## Setup
+
+Install the dependencies:
+
+```bash
+npm install
 ```
 
-## Installation
+Start the dev server:
 
-If available on Hex this package can be added to your Gleam project:
-
-```sh
-gleam add hello_gleam
+```bash
+npm run dev
 ```
-
-and its documentation can be found at <https://hexdocs.pm/hello_gleam>.
